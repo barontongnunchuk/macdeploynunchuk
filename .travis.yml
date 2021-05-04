@@ -23,10 +23,7 @@ install:
   - cd nunchuck-qt
   - git branch -a
   - git checkout cobo
-  - cd contrib/libnunchuk
-  - git remote add gitlab https://gitlab.com/nunchuck/libnunchuk
-  - cd ../..
-  - pwd
+  - git submodule add -f https://gitlab.com/nunchuck/libnunchuk contrib/libnunchuk
   - git submodule update --init --recursive
   - cacheCommit=`cat $TRAVIS_BUILD_DIR/cache/bitcoin.commit`
   - currentCommit=`git -C contrib/libnunchuk/contrib/bitcoin rev-parse HEAD`
