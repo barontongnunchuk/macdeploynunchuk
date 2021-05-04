@@ -25,7 +25,8 @@ install:
   - git checkout cobo
   - cd contrib/libnunchuk
   - git remote add gitlab https://gitlab.com/nunchuck/libnunchuk
-  - git branch -a
+  - git checkout gitlab/ss
+  - git pull gitlab ss
   - cd ../..
   - pwd
   - git submodule update --init --recursive
