@@ -21,6 +21,7 @@ install:
   - git clone https://gitlab.com/nunchuck/nunchuck-qt
   - ls -la
   - cd nunchuck-qt
+  - git submodule update --init --recursive
   - git branch -a
   - git checkout cobo
   - cd contrib/libnunchuk
