@@ -22,9 +22,9 @@ install:
   - ls -la
   - cd nunchuck-qt
   - git branch -a
-  - git submodule update --depth 1 --init --recursive
+  - git submodule update --init --recursive
   - git checkout cobo
-  - git submodule update --depth 1 --init --recursive
+  - git submodule update --init --recursive
   - cacheCommit=`cat $TRAVIS_BUILD_DIR/cache/bitcoin.commit`
   - currentCommit=`git -C contrib/libnunchuk/contrib/bitcoin rev-parse HEAD`
   - if [ "$cacheCommit" == "$currentCommit" ]; then
