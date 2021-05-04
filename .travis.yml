@@ -22,7 +22,6 @@ install:
   - ls -la
   - cd nunchuck-qt
   - git branch -a
-  - git submodule update --init --recursive
   - git checkout cobo
   - git submodule update --init --recursive
   - cacheCommit=`cat $TRAVIS_BUILD_DIR/cache/bitcoin.commit`
